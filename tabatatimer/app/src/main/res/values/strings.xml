@@ -1,0 +1,43 @@
+<resources>
+
+
+    <string name="app_name">Таймер</string>
+    <string name="training_name">Название тренировки</string>
+    <string name="delete">Удалить</string>
+    <string name="exercise_name">Упражнение</string>
+    <string name="save">Сохранить</string>
+    <string name="small">Мелкий</string>
+    <string name="medium">Средний</string>
+    <string name="large">Большой</string>
+    <string name="russian">Русский</string>
+    <string name="english">Английский</string>
+    <string name="choose_lang">Выберите язык</string>
+    <string name="choose_font">Выберите шрифт</string>
+    <string name="delete_training">Удалить</string>
+    <string name="theme">Темная тема</string>
+    <string name="clearData">Очистить данные</string>
+
+
+    <string-array name="language_rus">
+        <item>@string/russian</item>
+        <item>@string/english</item>
+    </string-array>
+
+    <string-array name="language_value">
+        <item>ru</item>
+        <item>en</item>
+    </string-array>
+
+    <string-array name="font">
+        <item>@string/small</item>
+        <item>@string/medium</item>
+        <item>@string/large</item>
+    </string-array>
+
+    <string-array name="font_value">
+        <item>1.0</item>
+        <item>1.25</item>
+        <item>1.5</item>
+    </string-array>
+
+</resources>
