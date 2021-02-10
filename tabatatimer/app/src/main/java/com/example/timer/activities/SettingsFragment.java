@@ -2,7 +2,9 @@ package com.example.timer.activities;
 
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.example.timer.R;
@@ -86,4 +89,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
     }
+
+    public static void setConfiguration(Context context){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        float font_size = Float.parseFloat(sharedPreferences.getString("font", "1.0"));
+        String language = sharedPreferences.getString("language", "RU");
+        Configuration configuration = new Configuration();
+        configuration.fontScale = font_size;
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        configuration.locale = locale;
+        context.getResources().updateConfiguration(configuration, null);
+    }
+
 }

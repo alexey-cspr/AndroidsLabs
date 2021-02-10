@@ -58,15 +58,7 @@ public class TimerActivity extends AppCompatActivity implements SoundPool.OnLoad
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        float font_size = Float.parseFloat(sharedPreferences.getString("font", "1.0"));
-        String language = sharedPreferences.getString("language", "RU");
-        Configuration configuration = new Configuration();
-        configuration.fontScale = font_size;
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-        configuration.locale = locale;
-        this.getResources().updateConfiguration(configuration, null);
+        SettingsFragment.setConfiguration(this);
 
         setContentView(R.layout.timer_activity);
 
