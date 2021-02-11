@@ -90,16 +90,4 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         });
     }
 
-    public static void setConfiguration(Context context){
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        float font_size = Float.parseFloat(sharedPreferences.getString("font", "1.0"));
-        String language = sharedPreferences.getString("language", "RU");
-        Configuration configuration = new Configuration();
-        configuration.fontScale = font_size;
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-        configuration.locale = locale;
-        context.getResources().updateConfiguration(configuration, null);
-    }
-
 }

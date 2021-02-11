@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.SortedList;
 import com.example.timer.App;
 import com.example.timer.R;
 import com.example.timer.model.Exercise;
-import com.example.timer.model.Training;
 
 import java.util.List;
 

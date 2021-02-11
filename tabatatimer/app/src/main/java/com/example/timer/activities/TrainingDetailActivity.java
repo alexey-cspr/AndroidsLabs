@@ -3,8 +3,6 @@ package com.example.timer.activities;
 import androidx.lifecycle.Observer;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,10 +22,9 @@ import com.example.timer.model.Exercise;
 import com.example.timer.model.Training;
 
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 
-public class TrainingDetailActivity extends AppCompatActivity {
+public class TrainingDetailActivity extends BaseActivity {
 
     private static final String EXTRA_TRAINING = "TrainingDetailActivity.EXTRA_TRAINING";
 
@@ -49,8 +44,6 @@ public class TrainingDetailActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        SettingsFragment.setConfiguration(this);
 
         setContentView(R.layout.activity_training_detail);
 

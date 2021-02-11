@@ -5,20 +5,15 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,11 +24,10 @@ import com.example.timer.model.Exercise;
 import com.example.timer.model.Training;
 
 import java.util.List;
-import java.util.Locale;
 
 import static android.Manifest.permission.FOREGROUND_SERVICE;
 
-public class TimerActivity extends AppCompatActivity implements SoundPool.OnLoadCompleteListener{
+public class TimerActivity extends BaseActivity implements SoundPool.OnLoadCompleteListener{
 
     private int remain;
     private TextView exercise_time;
@@ -57,8 +51,6 @@ public class TimerActivity extends AppCompatActivity implements SoundPool.OnLoad
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        SettingsFragment.setConfiguration(this);
 
         setContentView(R.layout.timer_activity);
 
