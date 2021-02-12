@@ -6,7 +6,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
 import java.util.Random;
 
 public class CreateGameActivity extends LobbyActivity {
@@ -20,10 +19,13 @@ public class CreateGameActivity extends LobbyActivity {
         super.add = findViewById(R.id.btnAdd);
         super.roomId.setText(String.valueOf((new Random()).nextInt(50)));
         super.instruction.setText("4-cell ship");
-        super.role = getIntent().getStringExtra("role");
+
+        super.initViewModel();
+
+        super.viewModel.role = getIntent().getStringExtra("role");
 
         findViewById(R.id.btnCopyId).setOnClickListener(this::copyId);
-        findViewById(R.id.btnAdd).setOnClickListener(super::checkShipPlacement);
+        findViewById(R.id.btnAdd).setOnClickListener(super.viewModel::checkShipPlacement);
         createField();
     }
 
