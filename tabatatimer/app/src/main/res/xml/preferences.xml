@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        app:key="language"
+        app:entries="@array/language_rus"
+        app:entryValues="@array/language_value"
+        app:title="@string/choose_lang"
+        app:defaultValue="ru"
+        app:useSimpleSummaryProvider="true"
+        />
+
+    <SwitchPreferenceCompat
+        app:key="theme"
+        app:title="@string/theme"
+        />
+
+    <ListPreference
+        app:key="font"
+        app:entries="@array/font"
+        app:entryValues="@array/font_value"
+        app:title="@string/choose_font"
+        app:defaultValue="0"
+        app:useSimpleSummaryProvider="true"
+        />
+
+    <Preference
+        app:key="clear_data"
+        app:title="@string/clearData"
+        />
+
+
+</PreferenceScreen>
