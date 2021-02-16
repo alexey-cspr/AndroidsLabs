@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GameSeaBattle</string>
+    <string name="create_game">Create game</string>
+    <string name="join_game">Join game</string>
+    <string name="my_profile">My profile</string>
+    <string name="exit">Exit</string>
+    <string name="log_out">Log out</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="room_id">Room id:</string>
+    <string name="copy_room_id">Copy room id</string>
+    <string name="set_ship">Set ship</string>
+    <string name="check">Check</string>
+    <string name="add_ship">Add ship</string>
+    <string name="please_input_a_room_id">Please, input a room id</string>
+    <string name="choose_from_file">Choose photo from file</string>
+    <string name="upload_from_gravatar">Upload from gravatar</string>
+    <string name="new_username">New username:</string>
+    <string name="enter">Enter...</string>
+    <string name="save">Save</string>
+    <string name="amount_of_losses">Amount of losses:</string>
+    <string name="amount_of_wins">Amount of wins:</string>
+</resources>
